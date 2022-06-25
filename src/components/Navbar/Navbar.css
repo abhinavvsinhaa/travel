@@ -1,0 +1,55 @@
+/* We use cookies */
+.cookies-alert-bar {
+    background-color: var(--lightBlue);
+}
+
+.cookies-alert-bar > .col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.cookies-alert-bar > .col > button {
+    background-color: transparent;
+    border-radius: 10px;
+    border: 1px solid white;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 5px 10px;
+}
+
+.cookies-alert-bar > .col > p {
+    color: white;
+    font-size: 12px;
+}
+
+/* Trustpilot */
+.trustpilot-row {
+    background-color: #F6F6F6;
+}
+
+.trustpilot-row > .col {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.trustpilot-row > .col > div {
+    display: flex;
+    align-items: flex-end;
+}
+
+.trustpilot-row > .col > div > p {
+    font-size: 13px;
+}
+
+
+/* Media queries */
+@media screen and (min-width: 1210px) {
+    .navbar-container {
+    }
+}

@@ -1,0 +1,47 @@
+.hero-outer-container {
+    background: url('../../assets/home-background.jpg') center bottom no-repeat;
+    background-size: cover;
+    height: 500px;
+    padding: 0;
+}
+
+.hero-inner-container {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    backdrop-filter: brightness(50%);
+    height: 500px;
+}
+
+.hero-headline {
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.hero-subheadline {
+    color: white;
+    font-weight: 600;
+    text-align: center;
+}
+
+.hero-subheadline > span {
+    color: #F8D586;
+}
+
+.subheadline-row > .col {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-deals-outer {
+    background-color: var(--darkBlue);
+}
+
+.hero-deals-outer > span {
+    color: #F8D586;
+}
+
+.lowestFares-container {
+    padding-top: 20px;
+}
