@@ -27,14 +27,14 @@ const Hero = () => {
                                 quotes in seconds
                             </p>
                         </div>
-                        <div className="col-xl-3">
+                        <div className="col-xl-3 col">
                             <p className="hero-subheadline">
                                 <span>$287+</span>
                                 &nbsp;
                                 savings on each ticket
                             </p>
                         </div>
-                        <div className="col-xl-3">
+                        <div className="col-xl-3 col">
                             <p className="hero-subheadline">
                                 <span>100%</span>
                                 &nbsp;

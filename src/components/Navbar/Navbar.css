@@ -39,14 +39,63 @@
 }
 
 .trustpilot-row > .col > div {
-    display: flex;
-    align-items: flex-end;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    grid-gap: 10px;
 }
 
+.promobanner-bar{
+    background-color: rgb(10, 49, 124);
+    color: rgb(255, 255, 255);
+    padding: 7px 20px !important;
+    font-size: 11px;
+    font-weight: 600;
+}
+.promobanner-bar .svgIcon{
+    width: 17px;
+    height: 17px;
+}
+.promobanner-hidden-text{
+    max-height: 0px;
+    overflow: hidden;
+    width: 100%;
+    transition: all 0.5s ease-out 0s;
+    font-weight: 300;
+    margin: 0;
+}
+.show-text{
+    max-height: 300px;
+    transition: all 0.5s ease-in 0s;
+}
+.promobanner-hidden-text div {
+    padding: 20px 0px
+}
 .trustpilot-row > .col > div > p {
     font-size: 13px;
+    margin: 0;
 }
-
+.promobanner-content{
+    width: 96%;
+    padding: 0;
+}
+.promobanner-content > .row {
+    cursor: pointer;
+    width: 100%;
+    margin: 0;
+}
+.close-promobanner{
+    font-size: 16px;
+    margin: 0px;
+    cursor: pointer;
+}
+.promobanner-content > .row .col{
+    border-right: 1px solid rgb(16, 67, 162);
+    padding: 0px 20px;
+}
+.promobanner-content > .row .col:last-child{
+    border: 0px;
+}
 
 /* Media queries */
 @media screen and (min-width: 1210px) {
