@@ -1,15 +1,13 @@
 import React from "react";
 import './Hero.css';
-
 // Assets
 import lowestFares from '../../assets/lowest-fares.svg'
 import security from '../../assets/security.svg'
 import liveService from '../../assets/live-service.svg'
-
 const Hero = () => {
     return (
         <>
-        <div className="container-fluid hero-outer-container">
+         <div className="container-fluid hero-outer-container">
             <div className="container-fluid hero-inner-container">
                 <div className="container">
                     <div className="row">

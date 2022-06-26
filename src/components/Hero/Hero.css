@@ -1,14 +1,14 @@
 .hero-outer-container {
-    background: url('../../assets/home-background.jpg') center bottom no-repeat;
+    background: linear-gradient(rgba(34, 26, 25, 0.4), rgba(34, 26, 25, 0.4)) 29% -290px / auto, url('../../assets/home-background.jpg') no-repeat;
     background-size: cover;
     height: 500px;
+    background-position: 29% -290px;
     padding: 0;
 }
 
 .hero-inner-container {
     padding-top: 10px;
     padding-bottom: 10px;
-    backdrop-filter: brightness(50%);
     height: 500px;
 }
 

@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import './Navbar.css';
+import { NavLink } from "react-router-dom";
 
 // Assets
 import trustpilot from '../../assets/trustpilot.png'
-import bbb from '../../assets/bbb.png'
-
 const Navbar = () => {
     function closePromoBanner(){
         document.getElementById('promobanner').remove();
     }
     const [isExpand,setIsExpand] = useState(false);
+    const [isExpandHeader,setIsExpandHeader] = useState(false);
     function togglePromBanner(){
         const elements = document.getElementsByClassName('promobanner-hidden-text');
         for(var i=0; i <elements.length ; i++){
@@ -20,6 +20,25 @@ const Navbar = () => {
             }
         }
         setIsExpand(!isExpand)
+    }
+    function extendheader(){
+        const elem = document.getElementById('section-for-search');
+        if(isExpandHeader){
+            elem.classList.remove('show-section-for-search');
+        }else{
+            elem.classList.add('show-section-for-search');
+        }
+        setIsExpandHeader(!isExpandHeader)
+    }
+    function changeRadio(e,name , id){
+        const elems = document.querySelectorAll('input[name='+name+']');
+        for (const radioButton of elems) {
+            if (radioButton.id === id) {
+                radioButton.checked = true;
+            }
+        }
+        e.target.classList.add('checked')
+
     }
     return (
         <div className="container-fluid navbar-container">
@@ -87,8 +106,229 @@ const Navbar = () => {
             </div>
 
             {/* Navigation */}
-            <div className="row">
-                <div className="col-xl-8 col-lg-10 col-md-12 col-sm-12 col-12"></div>
+            <div className="row justify-content-center">
+                <div className="col-xl-9 col-lg-10 col-md-11 col-sm-12 col-12 header-bar">
+                    <div className="row justify-content-center header-container">
+                        <div className="col-2">
+                            <NavLink to='/'>
+                            <img src="https://www.asaptickets.com/_next/image?url=%2Fstatic%2Fimg%2F20plusAniversaryLogo.svg&w=256&q=75" alt="" />
+                            </NavLink>
+                        </div>
+                        <div className="col-6 container-fluid">
+                            <div className="row header-row">
+                                <div className="col">
+                                    <div className="header-column-indi">
+                                    <span>Flights</span>
+                                    <svg class="" style={{"fontSize":"8px"}} width="1em" height="1em" viewBox="64 64 896 896" fill="currentColor"><path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path></svg>
+                                    </div>
+                                    <div className="submenu-of-header">
+                                        <div style={{"display": 'grid','gridAutoFlow': 'row','gridGap':'15px'}}>
+                                            <div className="row-header-submenu">
+                                                <div className="col-title-submenu">Top Deals</div>
+                                                <div className="col-title-submenu ps-5">Premium Cabin Flights</div>
+                                            </div>
+                                            <div className="row-header-submenu">
+                                                <div className="px-3">
+                                                <a href="#">Top Airline Deals</a>
+                                                <a href="#">Cheap Flight Tickets</a>
+                                                <a href="#">Group Travel</a>
+                                                <a href="#">Multi City Flights</a>
+                                                <a href="#">One-Way Flights</a>
+                                                <a href="#">Non-Stop Flights</a>
+                                                <a href="#" style={{'textDecoration': 'underline' , 'color': '#0d6efd'}} className='pb-2'>See all</a>
+                                                </div>
+                                                <div className="px-4">
+                                                <a href="#">Premium Economy Flights</a>
+                                                <a href="#">Buisness Class Flights</a>
+                                                <a href="#">First Class Flights</a>
+                                                <a href="#">Buisness Airlines Deals</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col">
+                                    <div className="header-column-indi">
+                                    <span>Offers</span>
+                                    <svg class="" style={{"fontSize":"8px"}} width="1em" height="1em" viewBox="64 64 896 896" fill="currentColor"><path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path></svg>
+                                    </div>
+                                    <div className="submenu-of-header">
+                                        <div style={{"display": 'grid','gridAutoFlow': 'row','gridGap':'15px'}}>
+                                            <div className="row-header-submenu">
+                                                <div className="col-title-submenu">Flights From US</div>
+                                                <div className="col-title-submenu">Flights To US</div>
+                                            </div>
+                                            <div className="row-header-submenu">
+                                                <div className="px-3">
+                                                <a href="#">To Asia</a>
+                                                <a href="#">To Africa</a>
+                                                <a href="#">To Europe</a>
+                                                <a href="#">To Middle East</a>
+                                                <a href="#">To India & ISC</a>
+                                                <a href="#">To Oceania</a>
+                                                <a href="#">To Latin America</a>
+                                                <a href="#" style={{'textDecoration': 'underline' , 'color': '#0d6efd'}} className='pb-2'>See all</a>
+
+                                                </div>
+                                                <div className="px-3">
+                                                <a href="#">From Asia</a>
+                                                <a href="#">From Africa</a>
+                                                <a href="#">From Europe</a>
+                                                <a href="#">From Middle East</a>
+                                                <a href="#">From India & ISC</a>
+                                                <a href="#">From Oceania</a>
+                                                <a href="#">From Latin America</a>
+                                                <a href="#" style={{'textDecoration': 'underline' , 'color': '#0d6efd'}} className='pb-2'>See all</a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col">
+                                    <div className="header-column-indi">
+                                    <span>Hotels</span>
+                                    </div>
+                                </div>
+                                <div className="col">
+                                    <div className="header-column-indi">
+                                    <span>Extras</span>
+                                    <svg class="" style={{"fontSize":"8px"}} width="1em" height="1em" viewBox="64 64 896 896" fill="currentColor"><path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path></svg>
+                                    </div>
+                                    <div className="submenu-of-header">
+                                        <div style={{"display": 'grid','gridAutoFlow': 'row','gridGap':'15px'}}>
+                                            <div className="row-header-submenu">
+                                                <div className="col-title-submenu">Travel Extras</div>
+                                            </div>
+                                            <div className="row-header-submenu">
+                                                <div className="px-3">
+                                                <a href="#">Vacations</a>
+                                                <a href="#">Attractions</a>
+                                                <a href="#">Concierge</a>
+                                                <a href="#" style={{'textDecoration': 'underline' , 'color': '#0d6efd'}} className='pb-2'>See all</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col">
+                                    <div className="header-column-indi">
+                                    <span>Support</span>
+                                    <svg class="" style={{"fontSize":"8px"}} width="1em" height="1em" viewBox="64 64 896 896" fill="currentColor"><path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path></svg>
+                                    </div>
+                                    <div className="submenu-of-header">
+                                        <div style={{"display": 'grid','gridAutoFlow': 'row','gridGap':'15px'}}>
+                                            <div className="row-header-submenu">
+                                                <div className="px-3">
+                                                <a href="#">Customer Service</a>
+                                                <a href="#">My Booking</a>
+                                                <a href="#">FAQ</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col">
+                                    <div className="header-column-indi">
+                                    <span>About</span>
+                                    <svg class="" style={{"fontSize":"8px"}} width="1em" height="1em" viewBox="64 64 896 896" fill="currentColor"><path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path></svg>
+                                    </div>
+                                    <div className="submenu-of-header">
+                                        <div style={{"display": 'grid','gridAutoFlow': 'row','gridGap':'15px'}}>
+                                            <div className="row-header-submenu">
+                                                <div className="px-3">
+                                                    <NavLink to="/about">About Us</NavLink>
+                                                    <a href="#">Reviews</a>
+                                                    <a href="#">Video</a>
+                                                    <a href="#">Customer Stories</a>
+                                                    <NavLink to="/contact-us">Contact Us</NavLink>
+                                                    <a href="#">Blog</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-4">
+                            <div className="row info-header header-row">
+                                <div className="main-tollfree">
+                                <div className="phoneno-tollfree">
+                                    <div>
+                                        <div className="col align-items-center" style={{'display': 'grid','height': '100%' , 'justifyItems': 'end'}}>
+                                        <svg width="32" height="32" xmlns="http://www.w3.org/2000/svg" fill="transparent" stroke-linecap="round" stroke-miterlimit="50"><path d="M13.65 27.694a.5.5 0 000 1h4a.5.5 0 100-1h-4z" fill="currentColor"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M21.702 2H10.205a2.59 2.59 0 00-2.553 2.621v23.602a2.59 2.59 0 002.553 2.621h11.496a2.59 2.59 0 002.553-2.621V5.06h-.003v-.438A2.59 2.59 0 0021.701 2zM8.952 6.36h14v.225h.002v18.878H8.952V6.36zm0-1.3h14v-.451A1.291 1.291 0 0021.685 3.3H10.22A1.291 1.291 0 008.95 4.608v.452zm0 23.176v-1.473h14.002V28.236a1.291 1.291 0 01-1.268 1.308H10.22a1.291 1.291 0 01-1.268-1.308z" fill="currentColor"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M5.926 11.914a.65.65 0 010 .92 4.597 4.597 0 000 6.5.65.65 0 11-.92.92 5.897 5.897 0 010-8.34.65.65 0 01.92 0z" fill="#1CB948"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M3.415 10.06a.65.65 0 010 .92 7.219 7.219 0 000 10.21.65.65 0 01-.919.92 8.52 8.52 0 010-12.05.65.65 0 01.92 0zM25.543 11.914a.65.65 0 01.92 0 5.897 5.897 0 010 8.34.65.65 0 11-.92-.92 4.597 4.597 0 000-6.5.65.65 0 010-.92z" fill="#1CB948"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M28.053 10.06a.65.65 0 01.92 0 8.52 8.52 0 010 12.05.65.65 0 01-.92-.92 7.219 7.219 0 000-10.21.65.65 0 010-.92z" fill="#1CB948"></path></svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div className="col border-start border-end border-2 h-50 align-self-center">
+                                <div className="header-column-indi justify-content-center">
+                                    <div className="flag-us-block"></div>
+                                    <span><strong>ENG</strong></span>
+                                </div>
+                                <div className="submenu-of-header submenu-of-header-flags">
+                                        <div style={{"display": 'grid','gridAutoFlow': 'row','gridGap':'15px'}}>
+                                            <div className="row-header-submenu p-2">
+                                                <div className="px-3">
+                                                <a href="#">
+                                                <div className="flag-us-block d-inline-block"></div>
+                                                <span>United States- English</span>
+                                                </a>
+                                                <a href="#">
+                                                <div className="flag-us-block d-inline-block"></div>
+                                                <span>United States- Espanol</span>
+                                                </a>
+                                                <a href="#">
+                                                <div className="flag-canada-block d-inline-block"></div>
+                                                <span>Canada- English</span>
+                                                </a>
+                                                <a href="#">
+                                                <div className="flag-uk-block d-inline-block"></div>
+                                                <span>United Kingdom- English</span>
+                                                </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div onClick={extendheader} style={{'cursor': 'pointer'}} className="col fs-5 align-items-center">
+                                    {isExpandHeader? <svg width="1em" height="1em" viewBox="0 0 20 20" fill="currentColor" data-qa-search="opened"><path d="M20 1.15L18.84 0 10 8.83 1.16 0 0 1.15 l8.84 8.84-8.84 8.84 1.16 1.16 8.84-8.84 8.84 8.84 1.16-1.16-8.84-8.84z"></path></svg> :<svg width="1em" height="1em" viewBox="0 0 19 19" fill-opacity="0" stroke="currentColor" stroke-linecap="round" stroke-width="2" stroke-miterlimit="50" data-qa-search="closed"><path d="M1.797 8.658a6.658 6.658 0 1 1 13.315 0 6.658 6.658 0 0 1-13.315 0z"></path><path d="M12.782 13.65l3.995 3.995"></path></svg>}
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="section-for-search" className="col-xl-9 col-lg-10 col-md-11 col-sm-12 col-12 section-for-search">
+                    <div className="p-3 h-100">
+                        <div className="row">
+                            <div className="col search-form-div" id="round" onClick={(e) => {changeRadio(e,'trip','round')}}>
+                                <span>
+                                    <input type="radio" className="radio-search" name="trip" id="round" />
+                                    Round-Trip
+                                </span>
+                            </div>
+                            <div className="col search-form-div" id="one" onClick={(e) => {changeRadio(e,'trip','one')}}>
+                                <span>
+                                    <input type="radio" className="radio-search" name="trip" id="one" />
+                                    One-Way
+                                </span>
+                            </div>
+                            <div className="col-2" style={{'fontSize': '14px'}}>
+                                <a href="#" style={{'textDecoration': 'underline','color': 'rgb(59, 53, 54)'}}>Multi-City Flights</a>
+                            </div>
+                            <div className="col-7"></div>
+                        </div>
+                        <div className="row" style={{'display': 'grid' , 'gridTemplateColumns': '2fr 2fr 2fr 2fr 1.5fr 1fr'}}>
+                            <div className="col"></div>
+                            <div className="col"></div>
+                            <div className="col"></div>
+                            <div className="col"></div>
+                            <div className="col"></div>
+                            <div className="col"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             {/* Trustpilot, Top rated flight search site */}
@@ -99,8 +339,10 @@ const Navbar = () => {
                         &nbsp;&nbsp;
                         <p>Top Rated Flights Search Site</p>
                     </div>
-                    <div>
-                        <img src={bbb} alt=""/>
+                    <div className="acc-business">
+                        <a href="https://www.bbb.org/us/ca/san-francisco/profile/travel-agency/international-travel-network-llc-1116-72752">
+                        <img src="https://www.asaptickets.com/_next/image?url=%2Fstatic%2Fimg%2FBBB_Header_A_plus.svg&w=96&q=75"/>
+                        </a>
                         <p>Accredited Business</p>
                     </div>
                     <div>

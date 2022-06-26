@@ -1,0 +1,27 @@
+.contact-us-main h4{
+    margin-top: 40px;
+}
+.contact-us-main > div{
+    background: url("https://www.asaptickets.com/static/img/background/contactUs.jpg") center center / contain no-repeat;
+}
+.contact-us-main h1{
+   margin-bottom: 0.67em;
+}
+.new-reservations{
+    margin-bottom: 400px;
+}
+.flex-justify{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.new-reservations > div {
+    width: 33%;
+    margin-top: 20px;
+}
+.phone-btn{
+    color: rgb(62, 62, 62);
+    text-decoration: underline;
+    margin-top: 10px;
+    font-weight: bold;
+}
