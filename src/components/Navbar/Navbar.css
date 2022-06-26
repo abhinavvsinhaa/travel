@@ -373,20 +373,484 @@ body input{
 .promobanner-content > .row .col:last-child{
     border: 0px;
 }
+.asap-intro{
+    line-height: 1.8;
+}
+.aboutus-wrapperstyle{
+    max-width: 300px;
+}
+.aboutus-video-wrapper{
+    margin: 0px auto;
+    color: rgb(255, 255, 255) !important;
+    position: relative;
+    font-size: 53px
+}
+.aboutus-badges{
+    margin: auto;
+    text-align: start;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0px 0px 25px;
+}
+.aboutus-badges > div{
+    width: 100%;
+    display: flex;
+    place-items: center;
+    padding: 20px 0px !important;
+    color: rgb(255, 255, 255) !important
+}
+.simpleandfast{
+    padding: 35px 0px;
+    background-color: rgb(247, 247, 247);
+}
+.simpleandfast-container{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 10px;
+    max-width: 1130px;
+}
+.left-icon-tickets{
+    bottom: 30px;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgb(121, 121, 121);
+    transform: rotate(90deg) translateY(120%);
+    z-index: 2;
+    border-radius: 50%;
+    cursor: pointer;
+    color: rgb(136, 139, 145);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: absolute;
+}
+.right-icon-tickets{
+    bottom: 30px;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgb(121, 121, 121);
+    transform : rotate(-90deg) translateY(20%);
+    z-index: 2;
+    border-radius: 50%;
+    cursor: pointer;
+    color: rgb(136, 139, 145);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: absolute;
+}
+.bg-light-blue{
+    background: rgb(233, 242, 250);
+}
+.f-size-12-14 {
+    font-size: 12px;
+}
+.simpleandfasttitle{
+    font-size: 20px;
+    font-weight: 600;
+}
+.simpleandfast-flex-content{
+    padding: 40px 35px 0px;
+}
+.simpleandfast-icon{
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(229, 229, 229);
+    background: rgb(255, 255, 255);
+    margin-bottom: 25px;
+    border-radius: 50%;
+    box-shadow: rgb(0 0 0 / 10%) 0px -3px 30px;
+    width: 100px;
+    height: 100px;
+}
+.simpleandfast-icon::after{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(42, 76, 142);
+    border-radius: 100%;
+    content: "1";
+    font-weight: 700;
+    color: white;
+    line-height: 30px;
+    text-align: center;
+}
+.how-main-0::after{
+    content: '1';
+}
+.sf-icon-main{
+    background: url("https://www.asaptickets.com/static/img/about/spritesheet-2.png") no-repeat;
+}
+.how-0{
+    background-position: 0px 0px;
+    width: 65px;
+    height: 61px;
+}
+.how-1{
+    background-position: 0px -61px;
+    width: 54px;
+    height: 56px;
+}
+.how-main-1::after{
+    content: '2';
+}
+.how-main-2::after{
+    content: '3';
+}
+.how-2{
+    background-position: 0px -117px;
+    width: 54px;
+    height: 60px;
+}
+.asap-tickets{
+    padding: 10px 0px !important;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 10px;
+    max-width: 1130px;
+}
+.asap-tickets > h1 {
+    margin-bottom: 20px;
+    margin-top : 20px;
+    font-weight: 600;
+    text-align: center;
+    font-size: 20px;
+}
+.asap-tickets-container{
+    overflow-x: scroll;
+    width: 100%;
+    display: flex;
+    padding: 0px 20px;
+}
+.asap-tickets-container > div{
+    width: 208px;
+    padding: 20px;
+    text-align: center;
+}
+.flight-booking{
+    width: 168px;
+    height: 168px;
+    background: url("https://www.asaptickets.com/static/img/about/ellipse-0.jpg");
+    margin-left: auto;
+    margin-right: auto;
+}
+.hotel-booking{
+    width: 168px;
+    height: 168px;
+    background: url("https://www.asaptickets.com/static/img/about/ellipse-1.jpg");
+    margin-left: auto;
+    margin-right: auto;
+}
+.vacation-booking{
+    width: 168px;
+    height: 168px;
+    background: url("https://www.asaptickets.com/static/img/about/ellipse-2.jpg");
+    margin-left: auto;
+    margin-right: auto;
+}
+.service-booking{
+    width: 168px;
+    height: 168px;
+    background: url("https://www.asaptickets.com/static/img/about/ellipse-3.jpg");
+    margin-left: auto;
+    margin-right: auto;
+}
+.alltime-booking{
+    width: 168px;
+    height: 168px;
+    background: url("https://www.asaptickets.com/static/img/about/ellipse-4.jpg");
+    margin-left: auto;
+    margin-right: auto;
+}
+.asapticketstitle{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+.asap-tickets-container-title-ind{
+    min-height: 42px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-weight: bold !important;
+}
+.asap-tickets-many-year{
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+    padding: 0px 0px 0px 35px !important;
+}
+.asap-tickets-many-year > div {
+    border-width: 1.5px;
+    border-style: solid;
+    border-image: initial;
+    border-color: white white rgb(233, 242, 250);
+    cursor: pointer;
+    padding: 10px 15px;
+    font-weight: bold !important;
+    text-align: center;
+}
 
+.asap-intro{
+    max-width: 630px;
+    font-size: 14px !important;
+}
+.aboutus-wrapperstyle{
+    max-width: none;
+    margin: 0px !important;
+    width: 630px !important;
+    height: 320px !important;
+}
+.bg-blue{
+    background-color: rgb(233, 242, 250);
+}
+.bg-grey{
+    background: rgb(247, 249, 253) !important;
+}
+.asap-tickets-asoftoday{
+    padding: 5px 25px 70px;
+}
+.asap-tickets-asoftoday-pic{
+    height: 175px;
+    background: url("https://www.asaptickets.com/static/img/about/story-today.jpg") center top / contain no-repeat;
+}
+.asoftoday-content{
+    width: 100%;
+}
+.asoftoday-title{
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    margin-top: 25px;
+}
+.accreditations-title{
+    font-weight: 600;
+    font-size: 20px;
+}
+.accre-content{
+    width: 100%;
+    display: inline-block;
+    padding: 30px;
+    text-align: center;
+}
+.accre-content > div:first-child{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 60px;
+}
+.accre-content-pic{
+    background: url("https://www.asaptickets.com/static/img/about/spritesheet-3.png") no-repeat;
+}
+.pic-0{
+    background-position: 0px -118px;
+    width: 45px;
+    height: 45px;
+}
+.pic-1{
+    background-position: 0px -36px;
+    width: 63px;
+    height: 30px;
+}
+.pic-2{
+    background-position: 0px 0px;
+    width: 78px;
+    height: 36px;
+}
+.pic-3{
+    background-position: 0px -66px;
+    width: 60px;
+    height: 52px;
+}
+.slick-track{
+    display: flex;
+    width: 1092px;
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+}
 /* Media queries */
 @media (min-width: 768px){
+    .accre-content{
+        text-align: left;
+    }
+    .accreditations-title{
+        margin-bottom: 30px;
+    font-size: 30px !important;
+    font-weight: 400 !important;
+    }
+    .right-icon-tickets{
+        bottom: 60px;
+    left: calc(50% + 75px);
+    }
+    .asoftoday-title{
+        font-size: 18px !important;
+    margin-top: 0px !important;
+    }
+    .asoftoday-content{
+        padding-left: 35px;
+        line-height: 18px;
+    }
+    .asap-tickets-asoftoday-pic{
+        height: 320px;
+    }
+    .asap-tickets-asoftoday{
+        padding: 40px 0px;
+    align-items: flex-start;
+    display: flex !important;
+    }
+    .left-icon-tickets{
+        bottom: 60px;
+    left: calc(50% + 75px);
+    }
+    .asapticketstitle{
+        font-size: 30px !important;
+        font-weight: 400 !important;
+    }
+    .asap-tickets > h1 {
+        margin: 40px 0px 30px !important;
+    font-size: 30px !important;
+    font-weight: 400 !important;
+    }
+    .asap-tickets{
+        padding-bottom : 50px !important;
+    }
+    .simpleandfast-flex-content{
+        padding: 60px 10px 40px;
+    }
+    .simpleandfast-flex{
+        display: flex;
+    }
+    .simpleandfasttitle{
+        font-size: 30px !important;
+        font-weight: 400 !important;
+    }
+    .furhi{
+        font-weight: 600;
+    }
+    .f-size-12-14 {
+        font-size: 14px;
+    }
+    .simpleandfast-container{
+        padding: 20px;
+    }
+    .simpleandfast{
+        padding-top : 60px !important
+    }
     .hero-outer-container {
     background-size: cover;
     background-position: 29% -290px;
     }
+    .aboutus-inner-container{
+        display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 95px 20px 0px !important;
+    }
+    .what-is-asap{
+        text-align: center;
+    font-size: 30px !important;
+    font-weight: 400 !important;
+    }
+    .aboutus-video-wrapper{
+        margin: 0px auto 20px;
+    width: 630px !important;
+    height: 320px !important;
+    }
+    .aboutus-badges{
+        width: 100%;
+        padding: 20px 0px;
+    display: flex;
+    flex-wrap: inherit;
+    }
+    .accreditations-container{
+        padding: 65px 20px !important;
+    }
 }
 @media (min-width: 1025px){
+    .right-icon-tickets{
+        left: 685px;
+    }
+    .asoftoday-content{
+        line-height: 20px;
+        padding-left: 70px;
+    }
+    .asap-tickets-asoftoday-pic{
+        flex-shrink: 0;
+    width: 555px;
+    }
+    .left-icon-tickets{
+        left: 685px;
+    }
+    .asap-tickets-many-year > div{
+        padding : 20px 12px !important;
+    }
+    .asap-tickets-container > div {
+        width: 100%;
+        padding: 10px !important;
+    }
+    .asap-tickets-container{
+        overflow-x: visible;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+    }
+    .simpleandfast-flex-content{
+        padding: 60px 40px 40px;
+    }
+    .aboutus-badges > div{
+        width: auto;
+        font-size: 14px !important;
+        line-height: 24px !important;
+        padding: 0px !important;
+    }
     .hero-outer-container {
     background-size: cover;
     background-position: 29% -420px;
     }
+    .aboutus-inner-container{
+        -webkit-box-align: center;
+    align-items: center;
+    flex-flow: row wrap;
+    padding: 95px 20px 0px !important;
+    }
+    .what-is-asap{
+        text-align: left;
+    }
+    .asap-intro{
+        max-width: 370px;
+    font-size: 14px !important;
+    }
+    .aboutus-wrapperstyle{
+        max-width: 630px;
+    }
+    .aboutus-video-wrapper{
+        margin: 0px 0px 20px;
+    width: 630px !important;
+    height: 320px !important;
+    }
 }
+@media (min-width: 1130px){
+    .asap-tickets-many-year {
+        overflow-x: visible;
+        padding: 0px 20px !important;
+    }
+    }
 @media (min-width: 1920px){
     .hero-outer-container {
     background-size: cover;

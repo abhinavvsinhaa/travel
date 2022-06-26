@@ -5,11 +5,22 @@
     background-position: 29% -290px;
     padding: 0;
 }
+.aboutus-outer-container {
+    background: url("https://www.asaptickets.com/static/img/about/background.jpg") right bottom no-repeat, rgb(42, 76, 142);
+    height: 500px;
+    padding: 0;
+}
 
 .hero-inner-container {
     padding-top: 10px;
     padding-bottom: 10px;
     height: 500px;
+}
+.aboutus-inner-container {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 10px;
+    max-width: 1130px;
 }
 
 .hero-headline {

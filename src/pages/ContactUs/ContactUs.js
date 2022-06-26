@@ -1,6 +1,7 @@
 import React from "react";
 import './ContactUs.css';
 export default function ContactUs(){
+    document.title = 'Contact ASAP Tickets (800) 737-2238 -   Live Travel Agents Available 24/7'
     return(
         <>
         <div className="row justify-content-center py-3 container-fluid contact-us-main">

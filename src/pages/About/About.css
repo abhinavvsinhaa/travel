@@ -1,0 +1,35 @@
+.align-v-center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+}
+.aboutus-operating{
+    background: url("https://www.asaptickets.com/static/img/about/since.svg") center center no-repeat;
+    width: 40px;
+    height: 46px;
+    margin-right: 10px;
+}
+.aboutus-star{
+    background: url("https://www.asaptickets.com/static/img/about/star.svg") center center no-repeat;
+    width: 40px;
+    height: 46px;
+    margin-right: 10px;
+}
+.aboutus-discount{
+    background: url("https://www.asaptickets.com/static/img/about/discount.svg") center center no-repeat;
+    width: 40px;
+    height: 46px;
+    margin-right: 10px;
+}
+.aboutus-lang{
+    background: url("https://www.asaptickets.com/static/img/about/lang.svg") center center no-repeat;
+    width: 76px;
+    height: 46px;
+    margin-right: 10px;
+}
+.badges-text-block{
+    display: flex;
+    flex-direction: column;
+}

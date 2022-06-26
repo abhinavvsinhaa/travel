@@ -5,6 +5,7 @@ import lowestFares from '../../assets/lowest-fares.svg'
 import security from '../../assets/security.svg'
 import liveService from '../../assets/live-service.svg'
 const Hero = () => {
+    document.title='ASAP Tickets® Official Website | Asaptickets.com'
     return (
         <>
          <div className="container-fluid hero-outer-container">
