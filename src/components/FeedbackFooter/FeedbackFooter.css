@@ -1,0 +1,670 @@
+.nineseven-travelers{
+    font-size: 18px;
+    font-weight: bold !important;
+    color: black;
+}
+.rating-comp-img{
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+    margin: 0px;
+}
+.rating-comp-img > div{
+    box-sizing: border-box;
+    display: block;
+    max-width: 100%;
+}
+.rating-div > div {
+    font-size: 20px;
+}
+.rating-star{
+    padding-right: 3px;
+    font-size: 14px;
+}
+.rating-star-small{
+    padding-right: 3px;
+    font-size: 14px;
+}
+.rating-star .star-icon{
+    font-size: 20px;
+}
+.reviews-list{
+    overflow: hidden;
+    display: flex;
+    width: 2104px
+}
+.slick-custom-dots{
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex !important;
+}
+.disclaimer-footer{
+    max-width: 750px;
+    margin-top: 25px;
+    padding: 0px 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.disclaimer-footer > span{
+    font-size: 10px;
+    color: rgb(138, 138, 138) !important;
+}
+.getinstantfree{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    max-width: 340px;
+
+}
+.slick-dots-li > div{
+    transition: all 0.3s ease 0s;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-right: 5px;
+    background: rgb(190, 196, 206);
+}
+.slick-active > div{
+    transform: scale(1.35);
+    background: rgb(36, 114, 187);
+}
+.viewallreviews{
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    display: block !important;
+    width: 100%;
+    border-radius: 4px;
+    border: 2px solid rgb(36, 114, 187);
+    height: 40px;
+    line-height: 36px;
+    color: rgb(46, 111, 169);
+    background-color: transparent;
+    cursor: pointer;
+    transition: color 0.3s ease 0s;
+    font-size: 14px;
+}
+.reviews-list > div {
+    outline: none;
+    width: 263px;
+}
+.review-list-item{
+    min-height: 220px;
+    overflow: hidden;
+}
+.review-list-item > div:first-child{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+    margin-bottom: 20px;
+}
+.subscribe-form{
+    background: rgb(255, 255, 255);
+    padding: 30px 20px;
+    box-shadow: rgb(0 0 0 / 10%) 0px -3px 30px;
+    width: 100%;
+}
+.subscribe-button{
+    line-height: inherit;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold !important;
+    background-color: rgb(36, 114, 187);
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 4px;
+    width: 100%;
+    border: 0;
+    outline: 0;
+    font-size: 14px;
+}
+.block-wrapper{
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 10px;
+}
+.footer-hlinks{
+    border-bottom: 1px solid rgb(121, 126, 134);
+}
+.footer-hlinks-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+.footer-main-item{
+    margin: 0;
+    box-sizing: border-box;
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+}
+.footer-main-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+.footer-hlinks-item{
+    margin: 0;
+    box-sizing: border-box;
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+}
+.copyright-section{
+    margin: 0;
+    box-sizing: border-box;
+    flex-grow: 1;
+    max-width: 100%;
+    flex-basis: 0;
+}
+.footer-str-img{
+    margin: 0;
+    box-sizing: border-box;
+    flex-grow: 0;
+    max-width: 25%;
+    flex-basis: 25%;
+}
+.footer-hlinks-item > a{
+    margin: 10px auto;
+    font-size: 21px;
+}
+.bg-dark-blue {
+    background-color: rgb(1, 17, 80);
+}
+.asapvac{
+    background: url("https://www.asaptickets.com/static/img/brandLogos/Asap-Vacations-white.svg") no-repeat;
+    width: 6em;
+    height: 1em;
+}
+.page-container {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.asapcan{
+    background: url("https://www.asaptickets.com/static/img/brandLogos/Asap-Canada-white.svg") no-repeat;
+    width: 4.86em;
+    height: 1em;
+}
+.asapticks{
+    background: url("https://www.asaptickets.com/static/img/brandLogos/Asap-Uk-white.svg") no-repeat;
+    width: 4.86em;
+    height: 1em;
+}
+.asapes{
+    background: url("https://www.asaptickets.com/static/img/brandLogos/Asap-Sp-white.svg") no-repeat;
+    width: 4.86em;
+    height: 1em;
+}
+.itnlogo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    box-sizing: border-box;
+    padding: 0;
+    border: none;
+    margin: auto;
+    display: block;
+    width: 0;
+    height: 0;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+}
+.hidden{
+    display: none !important;
+}
+.text-muted {
+    color: rgb(138, 138, 138) !important;
+}
+.social-links{
+    margin: 0;
+    box-sizing: border-box;
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+}
+.social-links-a{
+    width: 31px;
+    height: 31px;
+    color: rgb(185, 185, 185);
+    background: url("https://www.asaptickets.com/static/img/sprites/spritesheet-social-white.svg")  -2px / 260px no-repeat;
+    background-position-y: -2px;
+}
+.ourpartners{
+    border-top: 1px solid rgba(230, 236, 247, 0.3);
+    margin-top: 20px;
+    padding: 20px 0px;
+}
+.social-links-a:hover{
+    background-position-y: -36px;
+}
+.facebook{
+    background-position-x: -2px;
+}
+.instagram{
+    background-position-x: -77px;
+}
+.youtube{
+    background-position-x: -115px;
+}
+.twitter{
+    background-position-x: -152px;
+}
+.blog{
+    background-position-x: -227px;
+}
+.partners-ind{
+    margin: 0px;
+    height: 40px;
+    display: block;
+}
+.bbb{
+    background: url("https://www.asaptickets.com/static/img/footer/BBB_Footer_A_plus.svg") center center / contain no-repeat;
+    width: 36px;
+    height: 45px;
+}
+.arc{
+    background: url("https://www.asaptickets.com/static/img/footer/ARC.svg") center center / cover no-repeat;
+    width: 60px;
+}
+.iatan{
+    background: url("https://www.asaptickets.com/static/img/footer/IATAN.svg") center center / cover no-repeat;
+    width: 40px;
+}
+.asta{
+    background: url("https://www.asaptickets.com/static/img/footer/ASTA.svg") center center / cover no-repeat;
+    width: 40px;
+}
+.cst{
+    background: url("https://www.asaptickets.com/static/img/footer/CST.svg") center center / cover no-repeat;
+    width: 54px;
+}
+.visa{
+    background: url("https://www.asaptickets.com/static/img/footer/VISA.svg") center center / cover no-repeat;
+    width: 70px;
+    display: none;
+}
+.mastercard{
+    background: url("https://www.asaptickets.com/static/img/footer/Mastercard.svg") center center / cover no-repeat;
+    width: 50px;
+    display: none;
+}
+.american{
+    background: url("https://www.asaptickets.com/static/img/footer/American-Express.svg") center center / cover no-repeat;
+    width: 38px;
+    display: none;
+}
+.discover{
+    background: url("https://www.asaptickets.com/static/img/footer/Discover.svg") center center / cover no-repeat;
+    width: 56px;
+    display: none;
+}
+.callus-button{
+    right: 5%;
+    bottom: 65px;
+    padding: 0px 10px;
+}
+.callus-button > div{
+    width: 75px;
+    height: 75px;
+    backface-visibility: visible;
+    cursor: pointer;
+    position: relative;
+}
+.callus-button-main::before , .callus-button-main::after{
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    z-index: 205;
+    border-radius: 50%;
+    display: block;
+    background-color: rgb(227, 227, 227);
+    opacity: 0;
+    animation: 3s cubic-bezier(0.36, 0.07, 0.19, 0.97) 1s infinite normal none running callus-animation-outer;
+}
+.callus-button-main::after{
+    width: 160%;
+    height: 160%;
+    animation: 3s cubic-bezier(0.36, 0.07, 0.19, 0.97) 1s infinite normal none running callus-animation-inner;
+}
+@keyframes callus-animation-outer {
+    0%{
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+    20%{
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        opacity: 0.4;
+    }
+}
+@keyframes callus-animation-inner {
+    0%{
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+    30%{
+        top: -30%;
+        left: -30%;
+        width: 160%;
+        height: 160%;
+        opacity: 0.4;
+    }
+}
+.callus-button > div:hover .flag{
+    transform: scale(1);
+}
+.text-green {
+    color: rgb(36, 132, 77);
+}
+.assistance-img{
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+    margin: 0;
+}
+.assistance-img > img{
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    box-sizing: border-box;
+    padding: 0;
+    border: none;
+    margin: auto;
+    display: block;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+}
+.button-hover-expand{
+    right: 0px;
+    bottom: 0px;
+    transform: scale(0);
+    transform-origin: 165px bottom;
+    width: 205px;
+    margin-bottom: 90px;
+    transition: all 0.3s ease 0s;
+    background-color: rgb(36, 132, 77);
+    color: rgb(255, 255, 255);
+}
+.modal-callquery{
+    background: rgb(255, 255, 255);
+}
+.button-hover-expand::after{
+    position: absolute;
+    top: calc(100% - 5px);
+    right: 30px;
+    width: 10px;
+    height: 10px;
+    content: "";
+    background-color: rgb(36, 132, 77);
+    transform: rotate(45deg);
+}
+.align-v-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+}
+.callus-button-main > button {
+    width: 75px;
+    height: 75px;
+    z-index: 206;
+    background-color: rgb(36, 132, 77);
+    color: rgb(255, 255, 255);
+    border: 0;
+    outline: 0;
+}
+.context-for-modal > div{
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+    margin: 0px;
+}
+.b-b-grey {
+    border-bottom: 1px solid rgb(229, 229, 229);
+}
+.phoneblock{
+    margin: 18px auto 0px;
+    padding: 7px 0px;
+    max-width: 223px;
+    border-radius: 4px;
+    background: 0% 0% no-repeat padding-box padding-box rgb(36, 132, 77);
+    color: rgb(255, 255, 255);
+}
+.modal-close{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 10;
+    font-size: 15px;
+    cursor: pointer;
+}
+.phonehint{
+    font-size: 10px;
+}
+.almost-half{
+    width: 40%;
+}
+.b-l-grey {
+    border-left: 1px solid rgb(229, 229, 229);
+}
+.modal-trustpilot > div{
+    overflow: hidden;
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+    width: 101px;
+    height: 20px;
+}
+.modal-trustpilot > div > img{
+    inset: 0px;
+    box-sizing: border-box;
+    padding: 0px;
+    border: none;
+    margin: auto;
+    display: block;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+}
+.phoneblock > a{
+    color: rgb(255, 255, 255);
+    display: block;
+    font-size: 18px;
+    line-height: 18px;
+}
+@media (max-width: 767px){
+.modal-close {
+    top: 0px;
+    right: 0px;
+    padding: 20px;
+    color: rgb(59, 53, 54);
+}
+}
+@media (max-width: 600px){
+    .modal-callquery{
+        max-width: 100%;
+    position: absolute;
+    overflow-y: auto;
+    inset: 0px;
+    height: 100%;
+    width: 100%;
+    }
+}
+@media (min-width: 600px){
+    .hidden{
+        display: block !important;
+    }
+    .mob {
+    display: none;
+    }
+}
+@media (min-width: 768px){
+    .phoneblock > a{
+        color: rgb(36, 132, 77);
+        font-size: 24px;
+        line-height: 26px;
+    }
+    .phonehint{
+        font-size: 15px;
+    }
+    .phoneblock{
+        background: rgb(255, 255, 255);
+    color: rgb(36, 132, 77);
+    }
+    .discover{
+        display: block;
+    }
+    .american{
+        display: block;
+    }
+    .mastercard{
+        display: block;
+    }
+    .visa{
+        display: block;
+    }
+    .ourpartners{
+        border-top: none;
+    }
+    .social-links{
+        flex-grow: 0;
+    max-width: 33.333333%;
+    flex-basis: 33.333333%;
+    }
+    .copyright-section{
+        flex-grow: 0;
+        max-width: 50%;
+        flex-basis: 50%;
+    }
+    .footer-str-img{
+        flex-grow: 0;
+        max-width: 8.333333%;
+        flex-basis: 8.333333%;
+    }
+    .footer-main-item{
+        flex-grow: 0;
+        max-width: 33.333333%;
+        flex-basis: 33.333333%;
+    }
+    .footer-hlinks-item > a{
+        font-size: 28px;
+    }
+    .footer-hlinks-item{
+        flex-grow: 0;
+    max-width: 25%;
+    flex-basis: 25%;
+    }
+    .block-wrapper{
+        padding: 20px;
+    }
+    .subscribe-button{
+        margin-left: 10px;
+    width: 135px;
+    height: 38px;
+    }
+    .subscribe-form{
+        display: flex;
+    align-items: flex-start;
+    padding: 20px 20px 5px !important;
+    }
+    .getinstantfree{
+        max-width: 750px;
+    flex-wrap: nowrap !important;
+    }
+    .viewallreviews{
+        max-width: 168px;
+    }
+    .review-list-item > div:first-child{
+        align-items: flex-start;
+    margin-bottom: 10px !important;
+    }
+    .review-list-item{
+        padding: 20px;
+    }
+    .rating-content-div{
+        padding: 0px 20px;
+    }
+    .rating-star {
+        font-size: 16px;
+    }
+    .rating-star-small {
+        font-size: 16px;
+    }
+}
+@media (min-width: 1024px){
+    .footer-main-item{
+    flex-grow: 1;
+    max-width: 100%;
+    flex-basis: 0;
+    }
+}
+@media (min-width: 1025px){
+    .modal-call-main{
+        max-width: 375px;
+    }
+    .footer-hlinks-item > a{
+        margin: 20px 0px;
+    }
+    .viewallreviews{
+        margin-top: 30px;
+    }
+    .flex-for-rating{
+        display: flex;
+        flex-wrap: wrap;
+        -webkit-box-align: center;
+        align-items: center;
+        margin-bottom: 0px !important;
+    }
+    .nineseven-travelers{
+    font-size: 20px !important;
+    }
+    .rating-div{
+        padding: 0px 10px 5px 40px;
+    }
+}
+@media (orientation: landscape){
+        .modal-callquery {
+            overflow-y: auto;
+            max-height: 100%;
+        }
+}
+.modal-width{
+    width: 375px;
+}
