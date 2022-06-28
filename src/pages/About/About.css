@@ -5,6 +5,12 @@
     transform: translate(-50%, -50%);
     white-space: nowrap;
 }
+.aboutus-video-wrapper > img{
+    height: 100%;
+    width: auto;
+    margin: auto;
+    display: block;
+}
 .aboutus-operating{
     background: url("https://www.asaptickets.com/static/img/about/since.svg") center center no-repeat;
     width: 40px;
@@ -32,4 +38,34 @@
 .badges-text-block{
     display: flex;
     flex-direction: column;
+}
+@media (max-width:1024px){
+    .slick-track-main{
+        overflow-x: scroll;
+    }
+}
+@supports (object-fit:cover){
+.aboutus-video-wrapper img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+}
+@media (max-width: 767px){
+    .badges-text-block{
+        width: auto;
+    display: contents;
+    }
+    .badges-width-sm{
+        width: 76px;
+    }
+    .aboutus-badges > div{
+        inline-size: max-content;
+        padding: 12px 0px !important;
+    }
+}
+@media (max-width: 768px){
+    .asap-intro{
+        font-size: 12px !important;
+    }
 }

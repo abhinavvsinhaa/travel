@@ -6,9 +6,7 @@
     padding: 0;
 }
 .aboutus-outer-container {
-    background: url("https://www.asaptickets.com/static/img/about/background.jpg") right bottom no-repeat, rgb(42, 76, 142);
-    height: 500px;
-    padding: 0;
+    background: rgb(42, 76, 142);
 }
 
 .hero-inner-container {
@@ -55,5 +53,60 @@
 }
 
 .lowestFares-container {
-    padding-top: 20px;
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 10px;
+}
+.lowestFares-container > div{
+    align-items: center;
+    justify-content: center;
+}
+.lowestfare-caption{
+    max-width: 220px;
+}
+.lowestfare-caption > p:first-child{
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+.lowestfare-caption > p:last-child{
+    color: rgb(138, 138, 138) !important;
+    font-size: 11px;
+
+}
+@media (min-width: 768px){
+    .lowestfare-caption{
+        margin-top: 10px;
+    }
+    .lowestFares-container > div{
+        justify-content: end;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .lowestFares-container{
+        display: flex;
+        padding: 20px;
+    }
+    .aboutus-outer-container{
+    background: url("https://www.asaptickets.com/static/img/about/background.jpg") right bottom no-repeat, rgb(42, 76, 142);
+    }
+}
+@media (min-width: 1025px){
+    .lowestfare-caption > p:last-child{
+        font-size: 12px;
+    }
+    .lowestfare-caption > p:first-child{
+        font-size: 14px;
+    }
+    .lowestfare-caption{
+        margin-top: 0px;
+    }
+    .lowestFares-container > div{
+        flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    }
 }

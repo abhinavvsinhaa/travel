@@ -1,8 +1,12 @@
+.contact-us-main{
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 10px;
+    background: url("https://www.asaptickets.com/static/img/background/contactUs.jpg") center center / contain no-repeat;
+}
 .contact-us-main h4{
     margin-top: 40px;
-}
-.contact-us-main > div{
-    background: url("https://www.asaptickets.com/static/img/background/contactUs.jpg") center center / contain no-repeat;
 }
 .contact-us-main h1{
    margin-bottom: 0.67em;
@@ -16,7 +20,7 @@
     justify-content: space-between;
 }
 .new-reservations > div {
-    width: 33%;
+    width: 100%;
     margin-top: 20px;
 }
 .phone-btn{
@@ -24,4 +28,17 @@
     text-decoration: underline;
     margin-top: 10px;
     font-weight: bold;
+}
+@media (min-width: 768px){
+    .new-reservations > div{
+        width: 50%;
+    }
+    .contact-us-main{
+        padding: 20px;
+    }
+}
+@media (min-width: 1025px){
+    .new-reservations > div{
+        width: 33%;
+    }
 }

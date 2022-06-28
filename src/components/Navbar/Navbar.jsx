@@ -2,14 +2,13 @@ import React, { useState } from "react";
 import './Navbar.css';
 import { NavLink } from "react-router-dom";
 
-// Assets
-import trustpilot from '../../assets/trustpilot.png'
-const Navbar = () => {
+const Navbar = ({isDesktop}) => {
     function closePromoBanner(){
         document.getElementById('promobanner').remove();
     }
     const [isExpand,setIsExpand] = useState(false);
     const [isExpandHeader,setIsExpandHeader] = useState(false);
+    const [isExpandCookie,setIsExpandCookie] = useState(false);
     function togglePromBanner(){
         const elements = document.getElementsByClassName('promobanner-hidden-text');
         for(var i=0; i <elements.length ; i++){
@@ -20,6 +19,21 @@ const Navbar = () => {
             }
         }
         setIsExpand(!isExpand)
+    }
+    function toggleCookie(){
+        const okgotitbtn = document.getElementById('okgotit');
+        const cookiecontainer = document.getElementsByClassName('cookies-container')[0];
+        const cookietxt = document.getElementsByClassName('cookie-txt')[0];
+        if(isExpandCookie){
+            okgotitbtn.classList.remove('d-none');
+            cookiecontainer.classList.add('extended')
+            cookietxt.classList.remove('notexpandedtxt')
+        }else{
+            okgotitbtn.classList.add('d-none');
+            cookiecontainer.classList.remove('extended')
+            cookietxt.classList.add('notexpandedtxt')
+        }
+        setIsExpandCookie(!isExpandCookie);
     }
     function extendheader(){
         const elem = document.getElementById('section-for-search');
@@ -42,74 +56,84 @@ const Navbar = () => {
     }
     return (
         <>
-        <div className="container-fluid navbar-container" style={{'position': 'fixed', 'zIndex': '999'}}>
+        <div className="w-100 navbar-container">
+            <div className="promobanner-container">
             {/* We use cookies section */}
-            <div id="promobanner" className="row promobanner-bar justify-content-center">
-        <div className="col-xl-9 col-lg-10 col-md-11 col-sm-12 col-12 container-fluid">
-            <div className="row">
-            <div className="col-{96%} container-fluid promobanner-content">
-                <div className="row" onClick={togglePromBanner}>
-                    <div className=" col container-fluid">
-                        <div className="row">
-                        <span class="flex"><svg width="1em" height="1em" fill="#ffda3e" viewBox="0 0 16.176 17.739" class="svgIcon" textfill="#0a317c"><path d="M.403 8.357H6.36a.4.4 0 00.285-.688l-1.2-1.2c4.015-4.992 10.727-.131 10.727-.131-5.158-11.353-13.428-4-13.428-4a4.272 4.272 0 00-.738.693L.684 1.709a.4.4 0 00-.688.285v5.957a.4.4 0 00.407.406z"></path><path d="M15.773 9.381H9.816a.4.4 0 00-.285.688l1.2 1.2C6.716 16.261.004 11.4.004 11.4c5.158 11.353 13.428 4 13.428 4a4.276 4.276 0 00.738-.693l1.322 1.322a.4.4 0 00.688-.285V9.787a.4.4 0 00-.407-.406z"></path></svg><span class="px-2">Free Exchange</span></span>
-                        </div>
-                        <div className="row promobanner-hidden-text">
-                            <div className = "py-3">
+            <div id="promobanner" className="promobanner-bar d-flex position-relative justify-content-between">
+                {/* Desktop  */}
+                <div className="main-promobanner" onClick={togglePromBanner}>
+                    <div className="">
+                        <span class="d-flex"><svg width="1em" height="1em" fill="#ffda3e" viewBox="0 0 16.176 17.739" class="svgIcon" textfill="#0a317c"><path d="M.403 8.357H6.36a.4.4 0 00.285-.688l-1.2-1.2c4.015-4.992 10.727-.131 10.727-.131-5.158-11.353-13.428-4-13.428-4a4.272 4.272 0 00-.738.693L.684 1.709a.4.4 0 00-.688.285v5.957a.4.4 0 00.407.406z"></path><path d="M15.773 9.381H9.816a.4.4 0 00-.285.688l1.2 1.2C6.716 16.261.004 11.4.004 11.4c5.158 11.353 13.428 4 13.428 4a4.276 4.276 0 00.738-.693l1.322 1.322a.4.4 0 00.688-.285V9.787a.4.4 0 00-.407-.406z"></path></svg><span style={{'padding': '0px 10px'}}>Free Exchange</span></span>
+                        <div className="promobanner-hidden-text">
+                            <div>
                             Feel worried about booking tickets now? Buy with more confidence: Free ticket exchange is available with our partner airlines.
                             </div>
                         </div>
                     </div>
-                    <div className=" col container-fluid">
-                        <div className="row">
-                        <span class="flex"><svg class="svgIcon" width="1em" height="1em" fill="#ffda3e" viewBox="0 0 19.924 22.568" textfill="#0a317c"><g><path d="M17.204 22.567H2.72A2.719 2.719 0 010 19.847v-8.929a2.719 2.719 0 012.72-2.72h14.485a2.719 2.719 0 012.72 2.72v8.929a2.719 2.719 0 01-2.721 2.72z"></path><g><path d="M2.629 9.601c-.024-.189-.561-4.652 1.9-7.448a7.462 7.462 0 0110.488 0c2.463 2.8 1.928 7.259 1.9 7.448l-2.469-.314 1.235.157-1.235-.154c0-.035.412-3.554-1.308-5.5a5.011 5.011 0 00-6.741 0c-1.72 1.944-1.31 5.462-1.306 5.5z"></path></g><text transform="translate(6.71 18.01)" fill="#0a317c" font-size="9" font-weight="700"><tspan x="0" y="0">$</tspan></text></g></svg><span class="px-2">Fare Lock</span></span>
-                        </div>
-                        <div className="row promobanner-hidden-text">
-                           <div className = "py-3">
+                    <div className="">
+                        <span class="d-flex"><svg class="svgIcon" width="1em" height="1em" fill="#ffda3e" viewBox="0 0 19.924 22.568" textfill="#0a317c"><g><path d="M17.204 22.567H2.72A2.719 2.719 0 010 19.847v-8.929a2.719 2.719 0 012.72-2.72h14.485a2.719 2.719 0 012.72 2.72v8.929a2.719 2.719 0 01-2.721 2.72z"></path><g><path d="M2.629 9.601c-.024-.189-.561-4.652 1.9-7.448a7.462 7.462 0 0110.488 0c2.463 2.8 1.928 7.259 1.9 7.448l-2.469-.314 1.235.157-1.235-.154c0-.035.412-3.554-1.308-5.5a5.011 5.011 0 00-6.741 0c-1.72 1.944-1.31 5.462-1.306 5.5z"></path></g><text transform="translate(6.71 18.01)" fill="#0a317c" font-size="9" font-weight="700"><tspan x="0" y="0">$</tspan></text></g></svg><span style={{'padding': '0px 10px'}}>Fare Lock</span></span>
+                        <div className="promobanner-hidden-text">
+                           <div>
                            Need more time to decide? We can lock your fare from 24 to 48 hours to hold your seat.
                            </div>
                         </div>
                     </div>
-                    <div className=" col container-fluid">
-                        <div className="row">
-                        <span class="flex"><svg class="svgIcon" width="1em" height="1em" fill="#ffda3e" viewBox="0 0 25 22.326" textfill="#0a317c"><text transform="translate(8 14.918)" font-size="11" font-family="Montserrat-Bold, Montserrat" font-weight="700"><tspan x="0" y="0">$</tspan></text><path d="M11.163 22.327a11.163 11.163 0 1111.163-11.163 11.176 11.176 0 01-11.163 11.163zm0-19.946a8.783 8.783 0 108.783 8.783 8.793 8.793 0 00-8.783-8.784z"></path><path d="M18.138 11.555V8.509a.973.973 0 01.973-.973h3.66a.973.973 0 01.973.973v3.046h.655a.972.972 0 01.865.518.943.943 0 01-.145 1.083l-3.458 3.742a.985.985 0 01-1.44 0l-3.458-3.742a.944.944 0 01-.145-1.083.972.972 0 01.865-.518z" fill="#0a317c" fill-rule="evenodd"></path><path d="M20.822 16.342L17.364 12.6a.125.125 0 01-.021-.147.154.154 0 01.14-.08h1.474V8.508a.155.155 0 01.154-.155h3.66a.155.155 0 01.155.155v3.865H24.4a.153.153 0 01.14.08.125.125 0 01-.021.147l-3.458 3.742a.166.166 0 01-.238 0" fill-rule="evenodd"></path><path d="M16.999 5.936l5.136-1.863.666 3.237-4.045.665z" fill="#0a317c"></path><path d="M20.838 19.622l-4.911-2.4 1.863-2.73 3.291 2.445z" fill="#0a317c"></path></svg><span class="px-2">Price Drop Guarantee</span></span>
-                        </div>
-                        <div className="row promobanner-hidden-text">
-                            <div className = "py-3">
+                    <div className="">
+                        <span class="d-flex"><svg class="svgIcon" width="1em" height="1em" fill="#ffda3e" viewBox="0 0 25 22.326" textfill="#0a317c"><text transform="translate(8 14.918)" font-size="11" font-family="Montserrat-Bold, Montserrat" font-weight="700"><tspan x="0" y="0">$</tspan></text><path d="M11.163 22.327a11.163 11.163 0 1111.163-11.163 11.176 11.176 0 01-11.163 11.163zm0-19.946a8.783 8.783 0 108.783 8.783 8.793 8.793 0 00-8.783-8.784z"></path><path d="M18.138 11.555V8.509a.973.973 0 01.973-.973h3.66a.973.973 0 01.973.973v3.046h.655a.972.972 0 01.865.518.943.943 0 01-.145 1.083l-3.458 3.742a.985.985 0 01-1.44 0l-3.458-3.742a.944.944 0 01-.145-1.083.972.972 0 01.865-.518z" fill="#0a317c" fill-rule="evenodd"></path><path d="M20.822 16.342L17.364 12.6a.125.125 0 01-.021-.147.154.154 0 01.14-.08h1.474V8.508a.155.155 0 01.154-.155h3.66a.155.155 0 01.155.155v3.865H24.4a.153.153 0 01.14.08.125.125 0 01-.021.147l-3.458 3.742a.166.166 0 01-.238 0" fill-rule="evenodd"></path><path d="M16.999 5.936l5.136-1.863.666 3.237-4.045.665z" fill="#0a317c"></path><path d="M20.838 19.622l-4.911-2.4 1.863-2.73 3.291 2.445z" fill="#0a317c"></path></svg><span style={{'padding': '0px 10px'}}>Price Drop Guarantee</span></span>
+                        <div className="promobanner-hidden-text">
+                            <div>
                             Not sure if you are getting the best deal? We will monitor the price and in case of a price drop, you will get the price difference.
                             </div>
                         </div>
                     </div>
-                    <div className=" col container-fluid">
-                        <div className="row">
-                        <span class="flex"><svg class="svgIcon" width="1em" height="1em" viewBox="0 0 21.415 21.029" fill="#ffda3e" textfill="#0a317c"><path d="M11.146 4.169h4.888l-.686-1.7zm4.677-2.815l1.137 2.818h.535a3.762 3.762 0 01.977.133l-1.4-3.456a1.352 1.352 0 00-1.76-.748L5.236 4.172h3.617zm-3.5 11.74a3.3 3.3 0 013.3-3.3H20.3v-1.84a2.8 2.8 0 00-2.8-2.8H2.8a2.8 2.8 0 00-2.8 2.8v10.283a2.8 2.8 0 002.8 2.8h14.7a2.8 2.8 0 002.8-2.8v-1.846h-4.677a3.3 3.3 0 01-3.302-3.3zm8.409-2.313h-5.113a2.312 2.312 0 100 4.624h5.113a.684.684 0 00.685-.684v-3.255a.684.684 0 00-.687-.687zm-5.113 3.308a.995.995 0 11.995-1 1 1 0 01-.998.997z"></path></svg><span class="px-2">Book Now - Pay Later!</span></span>
-                        </div>
-                        <div className="row promobanner-hidden-text">
-                            <div className = "py-3">
+                    <div className="">
+                        <span class="d-flex"><svg class="svgIcon" width="1em" height="1em" viewBox="0 0 21.415 21.029" fill="#ffda3e" textfill="#0a317c"><path d="M11.146 4.169h4.888l-.686-1.7zm4.677-2.815l1.137 2.818h.535a3.762 3.762 0 01.977.133l-1.4-3.456a1.352 1.352 0 00-1.76-.748L5.236 4.172h3.617zm-3.5 11.74a3.3 3.3 0 013.3-3.3H20.3v-1.84a2.8 2.8 0 00-2.8-2.8H2.8a2.8 2.8 0 00-2.8 2.8v10.283a2.8 2.8 0 002.8 2.8h14.7a2.8 2.8 0 002.8-2.8v-1.846h-4.677a3.3 3.3 0 01-3.302-3.3zm8.409-2.313h-5.113a2.312 2.312 0 100 4.624h5.113a.684.684 0 00.685-.684v-3.255a.684.684 0 00-.687-.687zm-5.113 3.308a.995.995 0 11.995-1 1 1 0 01-.998.997z"></path></svg><span style={{'padding': '0px 10px'}}>Book Now - Pay Later!</span></span>
+                        <div className="promobanner-hidden-text">
+                            <div>
                             Not ready to pay the full ticket amount now? We also offer bookings with 3, 6 or 12 monthly instalments.
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className="col close-promobanner" onClick={closePromoBanner}>
-            <svg width="1em" height="1em" viewBox="0 0 20 20" fill="currentColor"><path d="M20 1.15L18.84 0 10 8.83 1.16 0 0 1.15 l8.84 8.84-8.84 8.84 1.16 1.16 8.84-8.84 8.84 8.84 1.16-1.16-8.84-8.84z"></path></svg>
-            </div>
-            </div>
-        </div>
-            </div>
+                <div className="flex-shrink-0 close-promobanner" onClick={closePromoBanner}>
+                    <svg width="1em" height="1em" viewBox="0 0 20 20" fill="currentColor"><path d="M20 1.15L18.84 0 10 8.83 1.16 0 0 1.15 l8.84 8.84-8.84 8.84 1.16 1.16 8.84-8.84 8.84 8.84 1.16-1.16-8.84-8.84z"></path></svg>
+                </div>
 
+                
+        {/* <div className="col-xl-7 col-lg-8 col-md-9 col-sm-11 col-12 container-fluid">
+            <div className="row">
+            <div className="container-fluid promobanner-content">
+                
+            </div>
+            
+            </div>
+        </div> */}
+            </div>
+            </div>
+            <div id="cookies-alert-bar" className="cookies-alert-bar">
+                <div className="cookies-container">   
+                    <div className="cookie-txt notexpandedtxt">
+                    We use cookies and network activity information to ensure the functionality of our website, to help us find ways to improve it and to make it more positive and relevant user experience. Please see our Privacy Policy for more details.
+                    </div>
+                    <div className="cookie-btn">
+                        <button className="d-none" id="okgotit" onClick={() => {document.getElementById('cookies-alert-bar').remove()}}>OK, GOT IT</button>
+                    </div>
+                    <div className="arrow-btn" onClick={toggleCookie}>
+                        <svg width="1.2em" height="1em" fill="currentColor" viewBox="0 0 9.998 6.024" class="collapse-icon justify-self-end "><path d="M6.024,5,5,3.976,3.976,5,.213,8.763A.724.724,0,1,0,1.236,9.788L5,6.024,8.763, 9.788A.724.724,0,1,0,9.787,8.763Z" transform="translate(9.999 10) rotate(180)"></path></svg>
+                    </div>
+                </div>
+                {/* <div className="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12 col">
+                </div> */}
+            </div>
             {/* Navigation */}
-            <div className="row justify-content-center" style={{'background': 'white'}}>
-                <div className="col-xl-9 col-lg-10 col-md-11 col-sm-12 col-12 header-bar">
-                    <div className="row justify-content-center header-container">
-                        <div className="col-2">
-                            <NavLink to='/'>
-                            <img src="https://www.asaptickets.com/_next/image?url=%2Fstatic%2Fimg%2F20plusAniversaryLogo.svg&w=256&q=75" alt="" />
-                            </NavLink>
-                        </div>
-                        <div className="col-6 container-fluid">
-                            <div className="row header-row">
-                                <div className="col">
+            <div className="w-100">
+                <div className="header-bar d-flex position-relative justify-content-between align-items-center">
+                <a href="/" rel="noopener" target="_self" aria-label="Main Logo" class="d-flex lh-1 ">
+                    <div className="assistance-img" style={{'width':'130px','height':'30px'}}>
+                        <img src="https://www.asaptickets.com/_next/image?url=%2Fstatic%2Fimg%2F20plusAniversaryLogo.svg&w=256&q=75" alt="" />
+                    </div>
+                </a>
+                <div className="d-inline-block position-relative d-md-flex">
                                     <div className="header-column-indi">
                                     <span>Flights</span>
                                     <svg class="" style={{"fontSize":"8px"}} width="1em" height="1em" viewBox="64 64 896 896" fill="currentColor"><path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path></svg>
@@ -140,7 +164,7 @@ const Navbar = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col">
+                <div className="d-inline-block position-relative d-md-flex">
                                     <div className="header-column-indi">
                                     <span>Offers</span>
                                     <svg class="" style={{"fontSize":"8px"}} width="1em" height="1em" viewBox="64 64 896 896" fill="currentColor"><path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path></svg>
@@ -178,50 +202,12 @@ const Navbar = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col">
+                <div className="d-inline-block position-relative d-md-flex">
                                     <div className="header-column-indi">
                                     <span>Hotels</span>
                                     </div>
                                 </div>
-                                <div className="col">
-                                    <div className="header-column-indi">
-                                    <span>Extras</span>
-                                    <svg class="" style={{"fontSize":"8px"}} width="1em" height="1em" viewBox="64 64 896 896" fill="currentColor"><path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path></svg>
-                                    </div>
-                                    <div className="submenu-of-header">
-                                        <div style={{"display": 'grid','gridAutoFlow': 'row','gridGap':'15px'}}>
-                                            <div className="row-header-submenu">
-                                                <div className="col-title-submenu">Travel Extras</div>
-                                            </div>
-                                            <div className="row-header-submenu">
-                                                <div className="px-3">
-                                                <a href="#">Vacations</a>
-                                                <a href="#">Attractions</a>
-                                                <a href="#">Concierge</a>
-                                                <a href="#" style={{'textDecoration': 'underline' , 'color': '#0d6efd'}} className='pb-2'>See all</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col">
-                                    <div className="header-column-indi">
-                                    <span>Support</span>
-                                    <svg class="" style={{"fontSize":"8px"}} width="1em" height="1em" viewBox="64 64 896 896" fill="currentColor"><path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path></svg>
-                                    </div>
-                                    <div className="submenu-of-header">
-                                        <div style={{"display": 'grid','gridAutoFlow': 'row','gridGap':'15px'}}>
-                                            <div className="row-header-submenu">
-                                                <div className="px-3">
-                                                <a href="#">Customer Service</a>
-                                                <a href="#">My Booking</a>
-                                                <a href="#">FAQ</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col">
+                <div className="d-inline-block position-relative d-md-flex">
                                     <div className="header-column-indi">
                                     <span>About</span>
                                     <svg class="" style={{"fontSize":"8px"}} width="1em" height="1em" viewBox="64 64 896 896" fill="currentColor"><path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path></svg>
@@ -231,21 +217,14 @@ const Navbar = () => {
                                             <div className="row-header-submenu">
                                                 <div className="px-3">
                                                     <NavLink to="/about">About Us</NavLink>
-                                                    <a href="#">Reviews</a>
-                                                    <a href="#">Video</a>
-                                                    <a href="#">Customer Stories</a>
                                                     <NavLink to="/contact-us">Contact Us</NavLink>
-                                                    <a href="#">Blog</a>
+                                                    <a href="#">FAQ</a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div className="col-4">
-                            <div className="row info-header header-row">
-                                <div className="main-tollfree">
+                <div className="main-tollfree d-md-flex">
                                 <div className="phoneno-tollfree">
                                     <div>
                                         <div className="col align-items-center" style={{'display': 'grid','height': '100%' , 'justifyItems': 'end'}}>
@@ -253,11 +232,11 @@ const Navbar = () => {
                                         </div>
                                     </div>
                                 </div>
-                                </div>
-                                <div className="col border-start border-end border-2 h-50 align-self-center">
-                                <div className="header-column-indi justify-content-center">
+                </div>
+                <div style={{'transition':'all 0.3s ease 0s','zIndex':'2'}} className="d-inline-block border-start border-end position-relative border-2 h-50 align-self-center">
+                                <div style={{'cursor':'pointer','padding':'8px 15px','lineHeight':'11px'}} className="d-flex fs-2 align-items-center h-100 justify-content-center">
                                     <div className="flag-us-block"></div>
-                                    <span><strong>ENG</strong></span>
+                                    <span style={{'fontSize':'12px'}}><strong>ENG</strong></span>
                                 </div>
                                 <div className="submenu-of-header submenu-of-header-flags">
                                         <div style={{"display": 'grid','gridAutoFlow': 'row','gridGap':'15px'}}>
@@ -283,14 +262,11 @@ const Navbar = () => {
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div onClick={extendheader} style={{'cursor': 'pointer'}} className="col fs-5 align-items-center">
+                </div>
+                <div onClick={extendheader} style={{'cursor': 'pointer'}} className="position-relaive d-flex ml-3 h-100 fs-5 align-items-center">
                                     {isExpandHeader? <svg width="1em" height="1em" viewBox="0 0 20 20" fill="currentColor" data-qa-search="opened"><path d="M20 1.15L18.84 0 10 8.83 1.16 0 0 1.15 l8.84 8.84-8.84 8.84 1.16 1.16 8.84-8.84 8.84 8.84 1.16-1.16-8.84-8.84z"></path></svg> :<svg width="1em" height="1em" viewBox="0 0 19 19" fill-opacity="0" stroke="currentColor" stroke-linecap="round" stroke-width="2" stroke-miterlimit="50" data-qa-search="closed"><path d="M1.797 8.658a6.658 6.658 0 1 1 13.315 0 6.658 6.658 0 0 1-13.315 0z"></path><path d="M12.782 13.65l3.995 3.995"></path></svg>}
                                 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                </div>       
                 </div>
                 <div id="section-for-search" className="col-xl-9 col-lg-10 col-md-11 col-sm-12 col-12 section-for-search">
                     <div className="p-3 h-100">
@@ -324,36 +300,32 @@ const Navbar = () => {
                 </div>
             </div>
         </div>
-        <div className="container-fluid" style={{'paddingTop': '106px'}}>
                         {/* Trustpilot, Top rated flight search site */}
-                        <div id="cookies-alert-bar" className="row cookies-alert-bar justify-content-center">
-                <div className="col-xl-6 col-lg-8 col-md-10 col-sm-12 col-12 col">
-                    <p>We use cookies and network activity information to ensure the functionality of our website, to help us find ways to improve it and to make it more positive and relevant user experience. Please see our Privacy Policy for more details.</p>
-                </div>
-                <div className="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12 col">
-                    <button onClick={() => {document.getElementById('cookies-alert-bar').remove()}}>OK, GOT IT</button>
-                </div>
-            </div>
-        <div className="row trustpilot-row justify-content-center">
-                <div className="col-xl-8 col-lg-10 col-md-12 col-sm-12 col-12 col">
-                    <div>
-                        <img src={trustpilot} alt=""/>
-                        &nbsp;&nbsp;
-                        <p>Top Rated Flights Search Site</p>
+        <div className="w-100 trustpilot-row">
+                <div className="d-flex align-items-center">
+                    <div className="trustpilot-img d-flex justify-content-center align-items-center w-100">
+                        <div>
+                        <a class="d-flex lh-1 " href="https://www.trustpilot.com/review/www.asaptickets.com"aria-label="Trust Pilot Info">
+                            
+                                <div style={{'display': 'block','overflow':'hidden','position':'absolute','top':'0','left':'0','bottom':'0','right':'0','boxSizing':'border-box','margin':'0'}}>
+                                 <img style={{'position':'absolute','top':'0','left':'0','bottom':'0','right':'0','boxSizing':'border-box','padding':'0','border':'none','display': 'block','width':'0','height':'0','minWidth':'100%','maxWidth':'100%','minHeight':'100%','maxHeight':'100%'}} alt="trustpilot" sizes="100vw" src="https://www.asaptickets.com/_next/image?url=https%3A%2F%2Fimages-static.trustpilot.com%2Fapi%2Flogos%2Flight-bg%2Flogo.svg&amp;w=3840&amp;q=75" decoding="async" data-nimg="fill" loading="lazy"/> 
+                                </div>
+                        </a>
+                        </div>
+                        Top Rated Flights Search Site
                     </div>
-                    <div className="acc-business">
+                    <div className="acc-business d-flex justify-content-center align-items-center w-100">
                         <a href="https://www.bbb.org/us/ca/san-francisco/profile/travel-agency/international-travel-network-llc-1116-72752">
                         <img src="https://www.asaptickets.com/_next/image?url=%2Fstatic%2Fimg%2FBBB_Header_A_plus.svg&w=96&q=75"/>
                         </a>
-                        <p>Accredited Business</p>
+                        <span className="hid-sm">Accredited Business</span>
                     </div>
-                    <div>
-                    <span class="f-size-18 m-r-sm v-middle"><svg width="1.17em" height="1em" viewBox="0 0 21 18" fill="currentColor"><path d="M18.152 9.676l-6.98 6.98a1.042 1.042 0 0 1-1.472 0L2.674 9.63 a4.55 4.55 0 0 1-1.341-3.24 4.55 4.55 0 0 1 1.341-3.238 4.55 4.55 0 0 1 3.24-1.342 4.55 4.55 0 0 1 3.238 1.342l.549.549-.84.841a.52.52 0 0 0 .735.736l2.124-2.126a4.55 4.55 0 0 1 3.24-1.342c1.242 0 2.405.49 3.275 1.38 1.746 1.785 1.708 4.694-.083 6.486zm.827-7.214A5.58 5.58 0 0 0 14.96.77a5.585 5.585 0 0 0-3.975 1.646l-.548.549-.548-.549 A5.584 5.584 0 0 0 5.913.77a5.585 5.585 0 0 0-3.975 1.646A5.584 5.584 0 0 0 .292 6.391c0 1.501.585 2.913 1.646 3.975l7.026 7.025 c.406.406.939.609 1.472.609s1.066-.203 1.472-.609l6.98-6.98 c2.192-2.192 2.233-5.758.091-7.949z"></path><path d="M18.75 6.155a3.8 3.8 0 0 0-2.768-3.425.52.52 0 1 0-.279 1.002 2.756 2.756 0 0 1 2.008 2.487.52.52 0 0 0 1.04-.064z"></path></svg></span>
-                        <p>Recommended by 97% customers</p>
+                    <div className="hid-sm w-100 text-center">
+                    <span style={{'fontSize': '18px',}} className='align-middle me-2'><svg width="1.17em" height="1em" viewBox="0 0 21 18" fill="currentColor"><path d="M18.152 9.676l-6.98 6.98a1.042 1.042 0 0 1-1.472 0L2.674 9.63 a4.55 4.55 0 0 1-1.341-3.24 4.55 4.55 0 0 1 1.341-3.238 4.55 4.55 0 0 1 3.24-1.342 4.55 4.55 0 0 1 3.238 1.342l.549.549-.84.841a.52.52 0 0 0 .735.736l2.124-2.126a4.55 4.55 0 0 1 3.24-1.342c1.242 0 2.405.49 3.275 1.38 1.746 1.785 1.708 4.694-.083 6.486zm.827-7.214A5.58 5.58 0 0 0 14.96.77a5.585 5.585 0 0 0-3.975 1.646l-.548.549-.548-.549 A5.584 5.584 0 0 0 5.913.77a5.585 5.585 0 0 0-3.975 1.646A5.584 5.584 0 0 0 .292 6.391c0 1.501.585 2.913 1.646 3.975l7.026 7.025 c.406.406.939.609 1.472.609s1.066-.203 1.472-.609l6.98-6.98 c2.192-2.192 2.233-5.758.091-7.949z"></path><path d="M18.75 6.155a3.8 3.8 0 0 0-2.768-3.425.52.52 0 1 0-.279 1.002 2.756 2.756 0 0 1 2.008 2.487.52.52 0 0 0 1.04-.064z"></path></svg></span>
+                        Recommended by 97% customers
                     </div>
                 </div>
             </div>
-        </div>
     </>
     );
 }

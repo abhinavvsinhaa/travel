@@ -342,6 +342,8 @@
     animation: 3s cubic-bezier(0.36, 0.07, 0.19, 0.97) 1s infinite normal none running callus-animation-outer;
 }
 .callus-button-main::after{
+    top: -30%;
+    left: -30%;
     width: 160%;
     height: 160%;
     animation: 3s cubic-bezier(0.36, 0.07, 0.19, 0.97) 1s infinite normal none running callus-animation-inner;
@@ -359,7 +361,7 @@
         left: -50%;
         width: 200%;
         height: 200%;
-        opacity: 0.4;
+        opacity: 0.2;
     }
 }
 @keyframes callus-animation-inner {
@@ -370,7 +372,7 @@
         height: 0;
         opacity: 0;
     }
-    30%{
+    20%{
         top: -30%;
         left: -30%;
         width: 160%;
@@ -509,7 +511,16 @@
     font-size: 18px;
     line-height: 18px;
 }
+.footer-main-item h3 {
+    padding: 10px 0px;
+}
 @media (max-width: 767px){
+    .xs-center{
+        text-align: center;
+    }
+    .callus-button{
+        display: none;
+    }
 .modal-close {
     top: 0px;
     right: 0px;
@@ -525,6 +536,18 @@
     inset: 0px;
     height: 100%;
     width: 100%;
+    }
+}
+@media (max-width: 599px){
+    .mob{
+        transform: rotate(-90deg);
+    transition: all 0.3s ease 0s;
+    }
+    .footer-main-item h3{
+        border-bottom: 1px solid rgb(53, 61, 103);
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
     }
 }
 @media (min-width: 600px){

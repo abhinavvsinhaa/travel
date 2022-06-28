@@ -4,9 +4,7 @@ export default function ContactUs(){
     document.title = 'Contact ASAP Tickets (800) 737-2238 -   Live Travel Agents Available 24/7'
     return(
         <>
-        <div className="row justify-content-center py-3 container-fluid contact-us-main">
-
-            <div className="col-xl-8 col-lg-9 col-md-10 col-sm-12 col-12">
+        <div className="contact-us-main">
                 <h1><strong>Contact Us</strong></h1>
                 <br/>
                 If you have any questions related to new reservations, existing reservations, billing (or any other travel related issues), please feel free to contact us by phone or e-mail during our regular business hours.
@@ -105,7 +103,6 @@ export default function ContactUs(){
                 Wilmington, DE 19801
                 </div>
                 </div>
-            </div>
 
             
         </div>

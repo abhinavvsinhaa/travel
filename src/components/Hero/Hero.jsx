@@ -85,55 +85,34 @@ const Hero = () => {
         </div>
 
         {/* Lowest fares guaranteed, .. */}
-        <div className="container-fluid lowestFares-container">
-            <div className="container">
-                <div className="row justify-content-center">
-                    <div 
-                    className="col-xl-3 col-lg-3 col-md-4 col-sm-12 col-12"
-                    style={{
-                        display: 'flex',
-                        alignItems: 'flex-start'
-                    }}
-                    >
-                        <img src={lowestFares} alt="" width="100px"/>
-                        <div style={{
-                            marginLeft: '20px'
-                        }}>
-                            <p style={{fontWeight: 600}}>Lowest Fares Guaranteed</p>
+        <div className="lowestFares-container">
+                    <div className="d-flex">
+                        <div className="d-flex justify-content-center flex-shrink-0" style={{'marginRight': '10px','marginLeft':'15px','width':'80px'}}>
+                        <img src="https://www.asaptickets.com/_next/image?url=%2Fstatic%2Fimg%2FmainPage%2Flowest-fares.svg&w=96&q=75"/>
+                        </div>
+                        <div className="lowestfare-caption w-100">
+                            <p>Lowest Fares Guaranteed</p>
                             <p style={{opacity: 0.8, fontSize: '12px'}}>Discount phone-exclusive airfares with partner airlines unavailable online with "Book Now, Pay Later" option</p>
                         </div>
                     </div>
-                    <div 
-                    className="col-xl-3 col-lg-3 col-md-4 col-sm-12 col-12"
-                    style={{
-                        display: 'flex'
-                    }}
-                    >
-                        <img src={security} alt="" width="60px"/>
-                        <div style={{
-                            marginLeft: '20px'
-                        }}>
-                            <p style={{fontWeight: 600}}>Ultra-Secure & Trusted</p>
+                    <div className="d-flex">
+                        <div className="d-flex justify-content-center flex-shrink-0" style={{'marginRight': '10px','marginLeft':'15px','width':'80px'}}>
+                        <img src="https://www.asaptickets.com/_next/image?url=%2Fstatic%2Fimg%2FmainPage%2Fsecurity.svg&w=48&q=75"/>
+                        </div>
+                        <div className="lowestfare-caption w-100">
+                            <p>Ultra-Secure & Trusted</p>
                             <p style={{opacity: 0.8, fontSize: '12px'}}>Your privacy and data security is always our number-one priority - and we're endorsed by BBB, ARC, IATAN</p>
                         </div>
-                    </div>                    
-                    <div 
-                    className="col-xl-3 col-lg-3 col-md-4 col-sm-12 col-12"
-                    style={{
-                        display: 'flex'
-                    }}
-                    >
-                        <img src={liveService} alt="" width="80px"/>
-                        <div style={{
-                            marginLeft: '20px'
-                        }}>
-                            <p style={{fontWeight: 600}}>Award-Winning Live Service</p>
-                            <p style={{opacity: 0.8, fontSize: '12px'}}>Talking to robots can be tough. Travel worry-free knowing that 1700+ agents are always here to help you
-</p>
+                    </div>                   
+                    <div className="d-flex">
+                        <div className="d-flex justify-content-center flex-shrink-0" style={{'marginRight': '10px','marginLeft':'15px','width':'80px'}}>
+                        <img src="https://www.asaptickets.com/_next/image?url=%2Fstatic%2Fimg%2FmainPage%2Flive-service.svg&w=64&q=75"/>
                         </div>
-                    </div>    
-                </div>
-            </div>
+                        <div className="lowestfare-caption w-100">
+                            <p>Award-Winning Live Service</p>
+                            <p style={{opacity: 0.8, fontSize: '12px'}}>Talking to robots can be tough. Travel worry-free knowing that 1700+ agents are always here to help you</p>
+                        </div>
+                    </div>   
         </div>
         </>
     );

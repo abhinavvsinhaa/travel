@@ -3,44 +3,44 @@ export default function About(){
     document.title = 'About Asaptickets.com: ASAP Tickets® Official Website | Asaptickets.com'
     return(
         <>
-        <div className="container-fluid aboutus-outer-container">
+        <div className="aboutus-outer-container">
             <div className="aboutus-inner-container">
-                <div className="mb-3 text-white">
-                <h1 class="font-weight-bold text-white mb-3 what-is-asap">What is ASAP Tickets?</h1>
+                <div className="mb-4 text-white">
+                <h1 style={{'fontSize': '20px'}} class="fw-bold text-white mb-4 what-is-asap">What is ASAP Tickets?</h1>
                 <div className="asap-intro">
                 ASAP Tickets is a legit travel agency that provides cheap airline tickets worldwide. We specialize in providing the best flight deals that are not available online, complete with personalized 24/7 customer support. Personal Travel Managers will help you find and book airline tickets according to your budget and  flight preferences.
                 </div>
                 </div>
-                <div className="aboutus-wrapperstyle">
-                    <div className="mb-3 aboutus-video-wrapper">
+                <div style={{'marginLeft': 'auto','marginRight':'auto'}} className="aboutus-wrapperstyle w-100 flex-wrap flex-shrink-0 justify-content-between">
+                    <div style={{'overflow':'hidden' , 'margin':'0px auto','height':'171px','width':'302px','fontSize':'53px'}} className="position-relative flex-shrink-0 text-white lh-1 aboutus-video-wrapper">
                         <img alt="About us video" title="About us video" src="https://www.asaptickets.com/static/img/about/video-img.jpg"/>
                         <svg width="1em" height="1em" viewBox="14 4 53 53" fill="currentColor" class="align-v-center"><path d="M46.637 33.275l-6.386 5.14c-1.907 1.535-3.468.787-3.468-1.66v-12.54 c0-2.448 1.561-3.195 3.468-1.66l6.386 5.14c1.906 1.534 1.906 4.045 0 5.58zm-6.221-28.36c-14.122 0-25.57 11.447-25.57 25.57 0 14.122 11.448 25.57 25.57 25.57s25.57-11.448 25.57-25.57c0-14.123-11.448-25.57-25.57-25.57z"></path></svg>
                     </div>
                 </div>
                 <div className='aboutus-badges'>
                     <div>
-                    <div className='aboutus-operating'></div>
+                    <div className='aboutus-operating badges-width-sm'></div>
                         <div className='badges-text-block'>
                         Operating &ensp;
                         <strong>Since 2001</strong>
                         </div>
                     </div>
                     <div>
-                    <div className='aboutus-star'></div>
+                    <div className='aboutus-star badges-width-sm'></div>
                         <div className='badges-text-block'>
                         <strong>Top Rated Airline Ticket &ensp;</strong>
                         Agency
                         </div>
                     </div>
                     <div>
-                    <div className='aboutus-discount'></div>
+                    <div className='aboutus-discount badges-width-sm'></div>
                         <div className='badges-text-block'>
                         <strong>You Save $287+</strong>
                         on&ensp;Average per Ticket
                         </div>
                     </div>
                     <div>
-                    <div className='aboutus-lang'></div>
+                    <div className='aboutus-lang badges-width-sm'></div>
                         <div className='badges-text-block'>
                         We Speak&ensp;
                         <strong>Your Language</strong>
@@ -171,6 +171,7 @@ export default function About(){
         </div>
         <div className='accreditations-container simpleandfast-container'>
             <h1 class="accreditations-title text-center">Accreditations</h1>
+            <div className='slick-track-main'>
             <div className='slick-track'>
                 <div>
                     <div className='accre-content'>
@@ -204,6 +205,7 @@ export default function About(){
                         <div class="f-size-12-14">Accredited by International Airlines Travel Agent Network (IATAN). IATAN is a department of the International Air Transport Association and has been servicing all aspects of the US Travel and Tourism industry for more than 35 years, its programs are recognized around the world. Our IATAN number is 05-578602.</div>
                     </div>
                 </div>
+            </div>
             </div>
         </div>
         </>

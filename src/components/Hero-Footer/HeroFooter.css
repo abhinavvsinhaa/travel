@@ -1,0 +1,31 @@
+.hero-footer-container{
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.main-bold-of-herofooter{
+    margin-right: 5px;
+    font-size: 24px;
+}
+.hero-footer-content > div:last-child{
+    border: 0px !important;
+}
+@media (min-width: 1025px){
+    .main-bold-of-herofooter{
+        margin-right: 10px;
+    }
+}
+@media (min-width: 768px){
+    .main-bold-of-herofooter ~ div{
+        margin-bottom: 10px;
+    font-size: 16px !important;
+    }
+    .hero-footer-content{
+        flex-direction: row !important;
+        padding: 40px 0px !important;
+    }
+    .hero-footer-content > div{
+        padding: 0px 20px;
+        border-right: 3px solid rgb(204, 31, 22);
+    }
+}
